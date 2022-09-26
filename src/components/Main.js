@@ -1,5 +1,5 @@
 import './Styles/Main.css'
-import LoadingButton from './LoadingButton';
+import LoadingButton from './LoadingButton'
 export default function Main() {
     return (
         <div>
