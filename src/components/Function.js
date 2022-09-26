@@ -1,4 +1,8 @@
 import { useState, useEffect } from "react"
+import Button from "react-bootstrap/Button"
+import scissors from '../assets/img/scissors.png'
+import paper from '../assets/img/paper.png'
+import rock from '../assets/img/rock.png'
 import gif from '../assets/img/giphy.gif'
 export const Fuction = () => {
     const [player1Option, setplayer1Option] = useState()
@@ -16,6 +20,27 @@ export const Fuction = () => {
         setplayer1Option(Math.floor(Math.random() * 3));
         setPlayer2Option(Math.floor(Math.random() * 3));
     }
+
+     //0=tijera 1=papel 2=piedra
+     useEffect(() => {
+        if (player1Option == 0) {
+            setImgPlayer1(scissors)
+        } else if (player1Option == 1) {
+            setImgPlayer1(paper)
+        } else if (player1Option == 2) {
+            setImgPlayer1(rock)
+        }
+
+        if (player2Option == 0) {
+            setImgPlayer2(scissors)
+        } else if (player2Option == 1) {
+            setImgPlayer2(paper)
+        } else if (player2Option == 2) {
+            setImgPlayer2(rock)
+        }
+
+    }, [player1Option, player2Option])
+
 
     //0=tijera 1=papel 2=piedra
     useEffect(() => {
