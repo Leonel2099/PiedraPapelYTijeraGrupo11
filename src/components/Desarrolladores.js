@@ -9,7 +9,7 @@ function Desarrolladores() {
         {
       desarrolladores.map((e)=> 
       <Integrantes 
-      gitname={e.nombre}
+      gitname={e.gitname}
       fullname={e.fullname}
       />)
     }
